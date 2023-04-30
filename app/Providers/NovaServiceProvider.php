@@ -2,6 +2,17 @@
 
 namespace App\Providers;
 
+use NormanHuth\NovaMenu\MenuCard;
+use NormanHuth\NovaMenu\MenuGroup;
+use NormanHuth\NovaMenu\MenuItem;
+use NormanHuth\NovaMenu\MenuSection;
+use NormanHuth\NovaMenu\Services\MenuFilter;
+
+use Illuminate\Support\Facades\Gate;
+use Laravel\Nova\Nova;
+use Laravel\Nova\NovaApplicationServiceProvider;
+use Illuminate\Http\Request;
+use Laravel\Nova\Actions\ActionEvent;
 use App\Nova\Resources\NormanHuthFontAwesomeField;
 use App\Nova\Resources\NormanHuthPrismJs;
 use App\Nova\Resources\NovaRadioFieldRadio;
@@ -12,15 +23,6 @@ use App\Nova\Resources\Menu3;
 use App\Nova\Resources\Menu4;
 use App\Nova\Resources\Menu5;
 use App\Nova\Resources\Menu6;
-use Illuminate\Support\Facades\Gate;
-use Laravel\Nova\Nova;
-use Laravel\Nova\NovaApplicationServiceProvider;
-use Illuminate\Http\Request;
-use NormanHuth\NovaMenu\MenuCard;
-use NormanHuth\NovaMenu\MenuGroup;
-use NormanHuth\NovaMenu\MenuItem;
-use NormanHuth\NovaMenu\MenuSection;
-use Laravel\Nova\Actions\ActionEvent;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -126,6 +128,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         ActionEvent::saving(function ($actionEvent) {
             return false;
         });
+        MenuFilter::activate('both');
     }
 
     /**
