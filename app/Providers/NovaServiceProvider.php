@@ -63,6 +63,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         return [
             MenuCard::make()->content('<div class="font-semibold text-center border rounded p-1 dark:border-gray-700">„Nova Menu Advanced“ Demo</div>'),
 
+            MenuSection::iframe('Open Iframe', 'https://huth.it')
+                ->faIcon('fa-solid fa-window-restore'),
+
             MenuSection::make('Fleet', [
                 MenuItem::resource(Menu::class)
                     ->faIcon('fa-solid fa-car')
