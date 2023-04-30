@@ -6,6 +6,12 @@ use App\Nova\Resources\NormanHuthFontAwesomeField;
 use App\Nova\Resources\NormanHuthPrismJs;
 use App\Nova\Resources\NovaRadioFieldRadio;
 use App\Nova\Resources\Menu;
+use App\Nova\Resources\Menu1;
+use App\Nova\Resources\Menu2;
+use App\Nova\Resources\Menu3;
+use App\Nova\Resources\Menu4;
+use App\Nova\Resources\Menu5;
+use App\Nova\Resources\Menu6;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
@@ -71,28 +77,28 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     ->faIcon('fa-solid fa-car')
                     ->asLabel()
                     ->iconClasses('fa-fw'),
-                MenuItem::resource(Menu::class)
+                MenuItem::resource(Menu1::class)
                     ->faIcon('fa-solid fa-id-card')
                     ->asLabel()
                     ->iconClasses('fa-fw'),
-                MenuItem::resource(Menu::class)
+                MenuItem::resource(Menu2::class)
                     ->faIcon('fa-solid fa-industry')
                     ->asLabel()
                     ->iconClasses('fa-fw'),
-                MenuItem::resource(Menu::class)
+                MenuItem::resource(Menu3::class)
                     ->faIcon('fa-solid fa-wrench')
                     ->asLabel()
                     ->iconClasses('fa-fw'),
             ])->imageIcon(asset('assets/pngwing.com.png'))->collapsable(),
 
             MenuSection::make('Customers', [
-                MenuItem::resource(Menu::class)
+                MenuItem::resource(Menu4::class)
                     ->faIcon('fa-solid fa-file-import')
                     ->iconClasses(['fa-fw', 'customers']),
-                MenuItem::resource(Menu::class)
+                MenuItem::resource(Menu5::class)
                     ->faIcon('fa-solid fa-file-invoice-dollar')
                     ->iconClasses(['fa-fw', 'customers']),
-                MenuItem::resource(Menu::class)
+                MenuItem::resource(Menu6::class)
                     ->faIcon('fa-solid fa-user')
                     ->iconClasses(['fa-fw', 'customers']),
             ])->faIcon('fa-solid fa-users')->collapsable(),

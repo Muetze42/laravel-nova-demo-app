@@ -59,9 +59,9 @@ class NormanHuthPrismJs extends Resource
     public function fields(NovaRequest $request): array
     {
         return [
-            Text::make('Note', function () {
+            Text::make('Note', 'content', function () {
                 return 'Open the detail page to see this field.';
-            })->onlyOnIndex(),
+            })->hideFromDetail()->readonly()->help('<a href="'.config('nova.path').'resources/norman-huth-prism-js/'.$this->getKey().'" class="link-default">Detail Page</a>'),
             PrismJs::make(__('Content'), 'content'),
             Markdown::make(__('Content'), 'content')
                 ->onlyOnForms(),
