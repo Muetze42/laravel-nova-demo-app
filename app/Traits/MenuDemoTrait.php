@@ -20,7 +20,7 @@ trait MenuDemoTrait
         return [
             MenuCard::make()->content('<div class="font-semibold text-center border rounded p-1 dark:border-gray-700">„Nova Menu Advanced“ Demo</div>'),
 
-            MenuSection::iframe('Open Iframe', 'https://huth.it')
+            MenuSection::iframe('Open Iframe', 'https://github.com/Muetze42/laravel-nova-demo-app/blob/main/app/Traits/MenuDemoTrait.php#L23')
                 ->faIcon('fa-solid fa-window-restore'),
 
             MenuSection::make('Fleet', [
