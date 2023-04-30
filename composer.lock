@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "442e3e4947c99157c8c705773b7a07a3",
+    "content-hash": "64cb55282f3e748cda83bd6feb3bbc39",
     "packages": [
         {
             "name": "brick/math",
@@ -3044,16 +3044,16 @@
         },
         {
             "name": "norman-huth/nova-menu",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Muetze42/nova-menu.git",
-                "reference": "e2dd0596bdfe38884fbac2140cf650f8b16c949e"
+                "reference": "96f5dfefcfef0bc97bfd6051f8f748188e10c54e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Muetze42/nova-menu/zipball/e2dd0596bdfe38884fbac2140cf650f8b16c949e",
-                "reference": "e2dd0596bdfe38884fbac2140cf650f8b16c949e",
+                "url": "https://api.github.com/repos/Muetze42/nova-menu/zipball/96f5dfefcfef0bc97bfd6051f8f748188e10c54e",
+                "reference": "96f5dfefcfef0bc97bfd6051f8f748188e10c54e",
                 "shasum": ""
             },
             "require": {
@@ -3098,7 +3098,7 @@
                     "type": "ko_fi"
                 }
             ],
-            "time": "2023-04-30T16:16:12+00:00"
+            "time": "2023-04-30T16:28:13+00:00"
         },
         {
             "name": "norman-huth/nova-prism-js",
