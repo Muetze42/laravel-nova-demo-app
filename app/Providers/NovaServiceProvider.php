@@ -7,7 +7,7 @@ use NormanHuth\NovaMenu\MenuCard;
 use NormanHuth\NovaMenu\MenuGroup;
 use NormanHuth\NovaMenu\MenuItem;
 use NormanHuth\NovaMenu\MenuSection;
-use NormanHuth\NovaMenu\Services\MenuFilter;
+//use NormanHuth\NovaMenu\Services\MenuFilter;
 
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Nova;
@@ -75,7 +75,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         ActionEvent::saving(function ($actionEvent) {
             return false;
         });
-        MenuFilter::activate('both');
+        //MenuFilter::activate('both');
     }
 
     /**
