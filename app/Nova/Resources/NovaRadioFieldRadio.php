@@ -59,6 +59,10 @@ class NovaRadioFieldRadio extends Resource
             return $this->radioDependsOnSelect();
         }
 
+        if ($this->getKey() == 4) {
+            return $this->changeRadioDependsOnSelect();
+        }
+
         return [
             Text::make(__('Type'), function () {
                 return 'Radio example';
@@ -136,6 +140,9 @@ class NovaRadioFieldRadio extends Resource
         ];
     }
 
+    /**
+     * @return array
+     */
     protected function radioDependsOnSelect(): array
     {
         return [
@@ -162,6 +169,43 @@ class NovaRadioFieldRadio extends Resource
                     function (Radio $field, NovaRequest $request, FormData $formData) {
                         if ($formData->select2 === 'M') {
                             $field->show();
+                        }
+                    }
+                ),
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    protected function changeRadioDependsOnSelect(): array
+    {
+        return [
+            Text::make(__('Type'), function () {
+                return 'Change Radio depends on Select example';
+            }),
+
+            Select::make('select2')
+                ->options([
+                    'S' => __('Simple'),
+                    'W' => __('With help texts'),
+                ])->default('S'),
+
+            Radio::make(__('Radio'), 'select')
+                ->options([
+                    'S' => __('Small'),
+                    'M' => __('Medium'),
+                    'L' => __('Large'),
+                ])
+                ->dependsOn(
+                    ['select2'],
+                    function (Radio $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->select2 === 'W') {
+                            $field->radioHelpTexts([
+                                'S' => __('Select small size'),
+                                'M' => __('Select medium size'),
+                                'L' => __('Select large size'),
+                            ]);
                         }
                     }
                 ),

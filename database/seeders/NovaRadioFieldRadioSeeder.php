@@ -13,20 +13,12 @@ class NovaRadioFieldRadioSeeder extends Seeder
      */
     public function run(): void
     {
-        NovaRadioFieldRadio::create([
-            'select' => 'L',
-            'select2' => 'L',
-            'select3' => 'M',
-        ]);
-        NovaRadioFieldRadio::create([
-            'select' => 'L',
-            'select2' => 'L',
-            'select3' => 'M',
-        ]);
-        NovaRadioFieldRadio::create([
-            'select' => 'L',
-            'select2' => 'L',
-            'select3' => 'M',
-        ]);
+        for ($i = 1; $i <= 4; $i++) {
+            NovaRadioFieldRadio::create([
+                'select' => 'L',
+                'select2' => 'L',
+                'select3' => 'M',
+            ]);
+        }
     }
 }
