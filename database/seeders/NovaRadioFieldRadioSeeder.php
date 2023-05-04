@@ -18,5 +18,15 @@ class NovaRadioFieldRadioSeeder extends Seeder
             'select2' => 'L',
             'select3' => 'M',
         ]);
+        NovaRadioFieldRadio::create([
+            'select' => 'L',
+            'select2' => 'L',
+            'select3' => 'M',
+        ]);
+        NovaRadioFieldRadio::create([
+            'select' => 'L',
+            'select2' => 'L',
+            'select3' => 'M',
+        ]);
     }
 }
