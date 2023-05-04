@@ -2,6 +2,9 @@
 
 namespace App\Nova\Resources;
 
+use Laravel\Nova\Fields\FormData;
+use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use NormanHuth\NovaRadioField\Radio;
 
@@ -48,7 +51,19 @@ class NovaRadioFieldRadio extends Resource
      */
     public function fields(NovaRequest $request): array
     {
+        if ($this->getKey() == 2) {
+            return $this->selectDependsOnRadion();
+        }
+
+        if ($this->getKey() == 3) {
+            return $this->radioDependsOnSelect();
+        }
+
         return [
+            Text::make(__('Type'), function () {
+                return 'Radio example';
+            }),
+
             Radio::make(__('Radio'), 'select')
                 ->options([
                     'S' => __('Small'),
@@ -81,7 +96,75 @@ class NovaRadioFieldRadio extends Resource
                 ])
                 ->gap(4)
                 ->inline()
-                ->addLabelStyles(['width' => '15rem']),
+                ->addLabelStyles(['width' => '15rem'])
+                ->hideFromIndex(),
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    protected function selectDependsOnRadion(): array
+    {
+        return [
+            Text::make(__('Type'), function () {
+                return 'Select depends on Radio example';
+            }),
+
+            Radio::make(__('Radio'), 'select')
+                ->options([
+                    'S' => __('Small'),
+                    'M' => __('Medium'),
+                    'L' => __('Large'),
+                ]),
+
+            Select::make('select2')
+                ->options([
+                    'S' => __('Small'),
+                    'M' => __('Medium'),
+                    'L' => __('Large'),
+                ])
+                ->hide()
+                ->dependsOn(
+                    ['select'],
+                    function (Select $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->select === 'M') {
+                            $field->show();
+                        }
+                    }
+                ),
+        ];
+    }
+
+    protected function radioDependsOnSelect(): array
+    {
+        return [
+            Text::make(__('Type'), function () {
+                return 'Radio depends on Select example';
+            }),
+
+            Select::make('select2')
+                ->options([
+                    'S' => __('Small'),
+                    'M' => __('Medium'),
+                    'L' => __('Large'),
+                ]),
+
+            Radio::make(__('Radio'), 'select')
+                ->options([
+                    'S' => __('Small'),
+                    'M' => __('Medium'),
+                    'L' => __('Large'),
+                ])
+                ->hide()
+                ->dependsOn(
+                    ['select2'],
+                    function (Radio $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->select2 === 'M') {
+                            $field->show();
+                        }
+                    }
+                ),
         ];
     }
 
