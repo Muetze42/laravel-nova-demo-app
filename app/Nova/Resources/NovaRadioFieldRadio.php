@@ -11,6 +11,20 @@ use NormanHuth\NovaRadioField\Radio;
 class NovaRadioFieldRadio extends Resource
 {
     /**
+     * The column by which to sort as default
+     *
+     * @var string
+     */
+    public static string $defaultSort = 'id';
+
+    /**
+     * Sort ascending or descending as default
+     *
+     * @var string
+     */
+    public static string $defaultOrder = 'asc';
+
+    /**
      * Get the displayable label of the resource.
      *
      * @return string
