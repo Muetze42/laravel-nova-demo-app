@@ -20,7 +20,7 @@
         "norman-huth/nova-font-awesome-field": "^1.0",
         "norman-huth/nova-menu": "^1.6.5",
         "norman-huth/nova-prism-js": "^1.1",
-        "norman-huth/nova-radio-field": "^1.1.3",
+        "norman-huth/nova-radio-field": "^1.1.7",
         "norman-huth/nova-resource-card": "^1.0"
     },
     "require-dev": {

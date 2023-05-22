@@ -2,6 +2,7 @@
 
 namespace App\Nova\Resources;
 
+use App\Nova\Actions\RadioAction;
 use Laravel\Nova\Fields\FormData;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
@@ -267,6 +268,8 @@ class NovaRadioFieldRadio extends Resource
      */
     public function actions(NovaRequest $request): array
     {
-        return [];
+        return [
+            new RadioAction(),
+        ];
     }
 }
