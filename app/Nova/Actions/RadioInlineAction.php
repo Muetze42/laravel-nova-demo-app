@@ -12,7 +12,7 @@ use Laravel\Nova\Fields\ActionFields;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use NormanHuth\NovaRadioField\Radio;
 
-class RadioAction extends Action
+class RadioInlineAction extends Action
 {
     use InteractsWithQueue, Queueable;
 

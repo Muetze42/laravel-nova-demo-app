@@ -3,6 +3,7 @@
 namespace App\Nova\Resources;
 
 use App\Nova\Actions\RadioAction;
+use App\Nova\Actions\RadioInlineAction;
 use Laravel\Nova\Fields\FormData;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
@@ -270,6 +271,7 @@ class NovaRadioFieldRadio extends Resource
     {
         return [
             new RadioAction(),
+            (new RadioInlineAction())->showInline(),
         ];
     }
 }
