@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Traits\MenuDemoTrait;
+use Laravel\Nova\Menu\Menu;
+use NormanHuth\NovaMenu\MenuDisclosure;
 use NormanHuth\NovaMenu\MenuGroup;
 use NormanHuth\NovaMenu\MenuItem;
 use NormanHuth\NovaMenu\MenuSection;
@@ -68,6 +70,27 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     public function boot(): void
     {
+        Nova::userMenu(function (Request $request, Menu $menu) {
+            $menu->prepend(
+                MenuDisclosure::make(__('MenuDisclosure'), [
+                    MenuItem::make(
+                        'My Profile Link 1',
+                        "/resources/users/{$request->user()->getKey()}"
+                    ),
+                    MenuItem::make(
+                        'My Profile Link 2',
+                        "/resources/users/{$request->user()->getKey()}"
+                    ),
+                    MenuItem::make(
+                        'My Profile Link 3',
+                        "/resources/users/{$request->user()->getKey()}"
+                    ),
+                ])->faIcon('fa-brands fa-laravel'),
+            );
+
+            return $menu;
+        });
+
         parent::boot();
         $this->footer();
         $this->menu();
