@@ -60,7 +60,7 @@ trait MenuDemoTrait
                     'url' => 'https://github.com/Muetze42/nova-menu',
                     'vendor' => 'norman-huth/nova-menu',
                     'package' => 'nova-menu',
-                ]),
+                ])->notFilterable(),
         ];
     }
 }
