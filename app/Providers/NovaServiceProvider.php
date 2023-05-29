@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Traits\MenuDemoTrait;
 use Laravel\Nova\Menu\Menu;
+use NormanHuth\NovaMenu\MenuCard;
 use NormanHuth\NovaMenu\MenuDisclosure;
 use NormanHuth\NovaMenu\MenuGroup;
 use NormanHuth\NovaMenu\MenuItem;
@@ -18,6 +19,10 @@ use Laravel\Nova\Actions\ActionEvent;
 use App\Nova\Resources\NormanHuthFontAwesomeField;
 use App\Nova\Resources\NormanHuthPrismJs;
 use App\Nova\Resources\NovaRadioFieldRadio;
+use NormanHuth\NovaMenu\UnfilteredMainMenu;
+use NormanHuth\NovaPerspectives\Menu\PerspectiveDisclosure;
+use NormanHuth\NovaPerspectives\Menu\PerspektiveSelect;
+use NormanHuth\NovaPerspectives\PerspectiveHelper;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -70,8 +75,19 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     public function boot(): void
     {
+        UnfilteredMainMenu::over(function (Request $request) {
+            return [
+                PerspektiveSelect::make('PerspektiveSelect'),
+                MenuCard::make('info')
+                    ->content('You select the „'.data_get(PerspectiveHelper::options(), $request->input('viaPerspective')).'“ perspective.')
+                    ->addClasses(['text-center'])
+                    ->rounded()
+            ];
+        });
+
         Nova::userMenu(function (Request $request, Menu $menu) {
             $menu->prepend(
+                PerspectiveDisclosure::make('PerspectiveDisclosure'),
                 MenuDisclosure::make(__('MenuDisclosure'), [
                     MenuItem::make(
                         'My Profile Link 1',
