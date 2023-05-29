@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6ef6ce2bd2daad1a3d48752c58da06a",
+    "content-hash": "2b4105ac04d729ae011690b4ccfdaf17",
     "packages": [
         {
             "name": "brick/math",
@@ -2571,16 +2571,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.66.0",
+            "version": "2.67.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "496712849902241f04902033b0441b269effe001"
+                "reference": "c1001b3bc75039b07f38a79db5237c4c529e04c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/496712849902241f04902033b0441b269effe001",
-                "reference": "496712849902241f04902033b0441b269effe001",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/c1001b3bc75039b07f38a79db5237c4c529e04c8",
+                "reference": "c1001b3bc75039b07f38a79db5237c4c529e04c8",
                 "shasum": ""
             },
             "require": {
@@ -2669,7 +2669,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-29T18:53:47+00:00"
+            "time": "2023-05-25T22:09:47+00:00"
         },
         {
             "name": "nette/schema",
@@ -3050,16 +3050,16 @@
         },
         {
             "name": "norman-huth/nova-basic-package",
-            "version": "1.2.1",
+            "version": "1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Muetze42/nova-basic-package.git",
-                "reference": "253f09582d7bc04ac55b64fd243e92f3fbb08263"
+                "reference": "896014006796c2172028e0390c92dbab1bced264"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Muetze42/nova-basic-package/zipball/253f09582d7bc04ac55b64fd243e92f3fbb08263",
-                "reference": "253f09582d7bc04ac55b64fd243e92f3fbb08263",
+                "url": "https://api.github.com/repos/Muetze42/nova-basic-package/zipball/896014006796c2172028e0390c92dbab1bced264",
+                "reference": "896014006796c2172028e0390c92dbab1bced264",
                 "shasum": ""
             },
             "require": {
@@ -3103,7 +3103,7 @@
                     "type": "ko_fi"
                 }
             ],
-            "time": "2023-05-21T15:38:53+00:00"
+            "time": "2023-05-29T11:53:05+00:00"
         },
         {
             "name": "norman-huth/nova-font-awesome-field",
@@ -3159,16 +3159,16 @@
         },
         {
             "name": "norman-huth/nova-menu",
-            "version": "1.7.0",
+            "version": "1.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Muetze42/nova-menu.git",
-                "reference": "4cd209ebd0a0bde13c473c4a0f01f2ca130a1fdf"
+                "reference": "933e625720e4c3d9170225bd3af2a07ad10407eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Muetze42/nova-menu/zipball/4cd209ebd0a0bde13c473c4a0f01f2ca130a1fdf",
-                "reference": "4cd209ebd0a0bde13c473c4a0f01f2ca130a1fdf",
+                "url": "https://api.github.com/repos/Muetze42/nova-menu/zipball/933e625720e4c3d9170225bd3af2a07ad10407eb",
+                "reference": "933e625720e4c3d9170225bd3af2a07ad10407eb",
                 "shasum": ""
             },
             "require": {
@@ -3214,7 +3214,66 @@
                     "type": "ko_fi"
                 }
             ],
-            "time": "2023-05-28T21:01:06+00:00"
+            "time": "2023-05-29T14:38:39+00:00"
+        },
+        {
+            "name": "norman-huth/nova-perspectives",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Muetze42/nova-perspectives.git",
+                "reference": "ad4637c7096ee5740c7e5bda0a2cabb876d89640"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Muetze42/nova-perspectives/zipball/ad4637c7096ee5740c7e5bda0a2cabb876d89640",
+                "reference": "ad4637c7096ee5740c7e5bda0a2cabb876d89640",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/nova": "^4.0",
+                "norman-huth/nova-basic-package": "^1.2.5",
+                "php": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NormanHuth\\NovaPerspectives\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NormanHuth\\NovaPerspectives\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Norman Huth",
+                    "email": "norman@huth.it"
+                }
+            ],
+            "support": {
+                "docs": "https://github.com/Muetze42/nova-perspectives#readme",
+                "issues": "https://github.com/Muetze42/nova-perspectives/issues",
+                "source": "https://github.com/Muetze42/nova-perspectives"
+            },
+            "funding": [
+                {
+                    "url": "https://huth.it/coffee",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://ko-fi.com/normanhuth",
+                    "type": "ko_fi"
+                }
+            ],
+            "time": "2023-05-29T14:39:55+00:00"
         },
         {
             "name": "norman-huth/nova-prism-js",
@@ -8028,16 +8087,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.21.0",
+            "version": "1.21.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "6df62b08faef4f899772bc7c3bbabb93d2b7a21c"
+                "reference": "e560a3eb5e76b35d6d92377e5abb6887c1c13c95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/6df62b08faef4f899772bc7c3bbabb93d2b7a21c",
-                "reference": "6df62b08faef4f899772bc7c3bbabb93d2b7a21c",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/e560a3eb5e76b35d6d92377e5abb6887c1c13c95",
+                "reference": "e560a3eb5e76b35d6d92377e5abb6887c1c13c95",
                 "shasum": ""
             },
             "require": {
@@ -8068,9 +8127,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.21.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.21.1"
             },
-            "time": "2023-05-17T13:13:44+00:00"
+            "time": "2023-05-29T11:55:57+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
