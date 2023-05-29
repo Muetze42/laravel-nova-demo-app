@@ -86,8 +86,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         });
 
         Nova::userMenu(function (Request $request, Menu $menu) {
-            $menu->prepend(
+            $menu->append(
                 PerspectiveDisclosure::make('PerspectiveDisclosure'),
+            );
+            $menu->append(
                 MenuDisclosure::make(__('MenuDisclosure'), [
                     MenuItem::make(
                         'My Profile Link 1',
