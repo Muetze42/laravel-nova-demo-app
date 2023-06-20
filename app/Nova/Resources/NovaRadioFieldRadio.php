@@ -79,6 +79,10 @@ class NovaRadioFieldRadio extends Resource
             return $this->changeRadioDependsOnSelect();
         }
 
+        if ($this->getKey() == 5) {
+            return $this->changeRadioDependsOnRadio();
+        }
+
         return [
             Text::make(__('Type'), function () {
                 return 'Radio example';
@@ -185,6 +189,44 @@ class NovaRadioFieldRadio extends Resource
                     function (Radio $field, NovaRequest $request, FormData $formData) {
                         if ($formData->select2 === 'M') {
                             $field->show();
+                        }
+                    }
+                ),
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    protected function changeRadioDependsOnRadio(): array
+    {
+        return [
+            Text::make(__('Type'), function () {
+                return 'Radio depends on Radio example';
+            }),
+
+            Radio::make('select2')
+                ->options([
+                    'S' => __('Small'),
+                    'M' => __('Medium'),
+                    'L' => __('Large'),
+                ]),
+
+            Radio::make(__('Radio'), 'select')
+                ->options([
+                    'S' => __('Small'),
+                    'M' => __('Medium'),
+                    'L' => __('Large'),
+                ])
+                ->dependsOn(
+                    ['select2'],
+                    function (Radio $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->select2 === 'M') {
+                            $field->radioHelpTexts([
+                                'S' => __('Select small size'),
+                                'M' => __('Select medium size'),
+                                'L' => __('Select large size'),
+                            ]);
                         }
                     }
                 ),
