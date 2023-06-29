@@ -12,7 +12,7 @@
         "fakerphp/faker": "^1.9",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.13",
-        "laravel/nova": "~4.25.1",
+        "laravel/nova": "^4.26.1",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "norman-huth/helpers-collection-laravel": "^1.0",
