@@ -3302,16 +3302,16 @@
         },
         {
             "name": "norman-huth/nova-menu",
-            "version": "v1.7.5",
+            "version": "v1.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Muetze42/nova-menu.git",
-                "reference": "c0eb572e977d3d4b547f0d760ddc37edbe1c3011"
+                "reference": "ffe097fda4da9a070c5fa470313ea83ffdc2ad08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Muetze42/nova-menu/zipball/c0eb572e977d3d4b547f0d760ddc37edbe1c3011",
-                "reference": "c0eb572e977d3d4b547f0d760ddc37edbe1c3011",
+                "url": "https://api.github.com/repos/Muetze42/nova-menu/zipball/ffe097fda4da9a070c5fa470313ea83ffdc2ad08",
+                "reference": "ffe097fda4da9a070c5fa470313ea83ffdc2ad08",
                 "shasum": ""
             },
             "require": {
@@ -3357,7 +3357,7 @@
                     "type": "ko_fi"
                 }
             ],
-            "time": "2023-10-12T14:22:10+00:00"
+            "time": "2023-10-12T15:22:25+00:00"
         },
         {
             "name": "norman-huth/nova-perspectives",
