@@ -10,6 +10,7 @@ use App\Nova\Resources\Menu4;
 use App\Nova\Resources\Menu5;
 use App\Nova\Resources\Menu6;
 use NormanHuth\NovaMenu\MenuCard;
+use NormanHuth\NovaMenu\MenuGroup;
 use NormanHuth\NovaMenu\MenuItem;
 use NormanHuth\NovaMenu\MenuSection;
 
@@ -24,6 +25,9 @@ trait MenuDemoTrait
                 ->faIcon('fa-solid fa-window-restore'),
 
             MenuSection::make('Fleet', [
+                MenuGroup::iframe('Open Iframe', 'https://huth.it')
+                    ->faIcon('fa-solid fa-window-restore')->asLabel(),
+
                 MenuItem::resource(Menu::class)
                     ->faIcon('fa-solid fa-car')
                     ->asLabel()
@@ -40,6 +44,11 @@ trait MenuDemoTrait
                     ->faIcon('fa-solid fa-wrench')
                     ->asLabel()
                     ->iconClasses('fa-fw'),
+
+                MenuItem::iframe('Open Iframe', 'https://huth.it')
+                    ->faIcon('fa-solid fa-window-restore')
+                    ->asLabel(),
+
             ])->imageIcon(asset('assets/pngwing.com.png'))->collapsable(),
 
             MenuSection::make('Customers', [

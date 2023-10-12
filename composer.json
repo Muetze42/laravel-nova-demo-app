@@ -18,7 +18,7 @@
         "norman-huth/helpers-collection-laravel": "^1.0",
         "norman-huth/nova-assets-versioning": "^1.0",
         "norman-huth/nova-font-awesome-field": "^1.0",
-        "norman-huth/nova-menu": "^1.7.0",
+        "norman-huth/nova-menu": "^v1.7.5",
         "norman-huth/nova-perspectives": "^1.0",
         "norman-huth/nova-prism-js": "^1.1",
         "norman-huth/nova-radio-field": "^1.1.7",
