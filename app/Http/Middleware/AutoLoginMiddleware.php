@@ -32,7 +32,7 @@ class AutoLoginMiddleware
             /* @var User $user */
             Auth::login($user);
 
-            return redirect($request->path());
+            return redirect($request->getRequestUri());
         }
 
         return $next($request);
