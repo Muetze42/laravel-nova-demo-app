@@ -27,6 +27,7 @@ class CardUser extends User
      * Determine if the current user can delete the given resource.
      *
      * @param Request $request
+     *
      * @return bool
      */
     public function authorizedToDelete(Request $request): bool
@@ -38,6 +39,7 @@ class CardUser extends User
      * Determine if the current user can restore the given resource.
      *
      * @param Request $request
+     *
      * @return bool
      */
     public function authorizedToRestore(Request $request): bool
@@ -49,6 +51,7 @@ class CardUser extends User
      * Determine if the current user can update the given resource.
      *
      * @param Request $request
+     *
      * @return bool
      */
     public function authorizedToUpdate(Request $request): bool
@@ -60,6 +63,7 @@ class CardUser extends User
      * Determine if the current user can force delete the given resource.
      *
      * @param Request $request
+     *
      * @return bool
      */
     public function authorizedToForceDelete(Request $request): bool
@@ -71,6 +75,7 @@ class CardUser extends User
      * Determine if the current user can replicate the given resource or throw an exception.
      *
      * @param Request $request
+     *
      * @return bool
      */
     public function authorizeToReplicate(Request $request): bool

@@ -25,11 +25,12 @@ abstract class Resource extends NovaResource
      *
      * @param NovaRequest  $request
      * @param NovaResource $resource
+     *
      * @return URL|string
      */
     public static function redirectAfterCreate(NovaRequest $request, $resource): URL|string
     {
-        return '/resources/'.static::uriKey();
+        return '/resources/' . static::uriKey();
     }
 
     /**
@@ -113,6 +114,7 @@ abstract class Resource extends NovaResource
      *
      * @param NovaRequest $request
      * @param Builder $query
+     *
      * @return Builder
      */
     public static function indexFilter(NovaRequest $request, Builder $query): Builder
@@ -125,6 +127,7 @@ abstract class Resource extends NovaResource
      *
      * @param NovaRequest $request
      * @param Builder $query
+     *
      * @return Builder
      */
     public static function indexQuery(NovaRequest $request, $query): Builder
@@ -133,6 +136,7 @@ abstract class Resource extends NovaResource
 
         if (static::$defaultSort && static::$defaultOrder && empty($request->get('orderBy'))) {
             $query->getQuery()->orders = [];
+
             return $query->orderBy(static::$defaultSort, static::$defaultOrder);
         }
 
@@ -144,6 +148,7 @@ abstract class Resource extends NovaResource
      *
      * @param NovaRequest $request
      * @param \Laravel\Scout\Builder $query
+     *
      * @return \Laravel\Scout\Builder
      */
     public static function scoutQuery(NovaRequest $request, $query)
@@ -156,6 +161,7 @@ abstract class Resource extends NovaResource
      *
      * @param NovaRequest $request
      * @param Builder $query
+     *
      * @return Builder
      */
     public static function detailQuery(NovaRequest $request, $query): Builder
@@ -170,6 +176,7 @@ abstract class Resource extends NovaResource
      *
      * @param NovaRequest $request
      * @param Builder $query
+     *
      * @return Builder
      */
     public static function relatableQuery(NovaRequest $request, $query): Builder
@@ -187,6 +194,7 @@ abstract class Resource extends NovaResource
      * @var bool
      */
     public bool $showCreatedAtField = false;
+
     public function showCreatedAtField(NovaRequest $request): bool
     {
         return $this->showCreatedAtField;
@@ -196,6 +204,7 @@ abstract class Resource extends NovaResource
      * Show in this resource the DateTime field `updated_at`
      */
     public bool $showUpdatedAtField = false;
+
     public function showUpdatedAtField(NovaRequest $request): bool
     {
         return $this->showUpdatedAtField;
@@ -205,6 +214,7 @@ abstract class Resource extends NovaResource
      * Default fields for every resource
      *
      * @param NovaRequest $request
+     *
      * @return array
      */
     protected function defaultFields(NovaRequest $request): array
@@ -214,14 +224,14 @@ abstract class Resource extends NovaResource
         if ($this->showCreatedAtField($request) && static::$model::CREATED_AT) {
             $fields = array_merge($fields, [
                 DateTime::make(__('Created at'), 'created_at')
-                    ->sortable()->filterable()->exceptOnForms()
+                    ->sortable()->filterable()->exceptOnForms(),
             ]);
         }
 
         if ($this->showUpdatedAtField($request) && static::$model::UPDATED_AT) {
             $fields = array_merge($fields, [
                 DateTime::make(__('Updated at'), 'updated_at')
-                    ->sortable()->filterable()->exceptOnForms()
+                    ->sortable()->filterable()->exceptOnForms(),
             ]);
         }
 
@@ -231,7 +241,7 @@ abstract class Resource extends NovaResource
         if ($request->input('trashed')) {
             $fields = array_merge($fields, [
                 DateTime::make(__('Deleted at'), 'deleted_at')
-                    ->sortable()->filterable()->exceptOnForms()
+                    ->sortable()->filterable()->exceptOnForms(),
             ]);
         }
 
@@ -240,7 +250,7 @@ abstract class Resource extends NovaResource
          * */
         if (method_exists(static::$model, 'getLogName') && class_exists('App\Nova\Resources\Activity')) {
             $fields = array_merge($fields, [
-                MorphMany::make(__('Activities'), 'activities', Activity::class)
+                MorphMany::make(__('Activities'), 'activities', Activity::class),
             ]);
         }
 
@@ -251,6 +261,7 @@ abstract class Resource extends NovaResource
      * Get the fields that are available for the given request.
      *
      * @param NovaRequest $request
+     *
      * @return FieldCollection
      */
     public function availableFields(NovaRequest $request): FieldCollection
@@ -266,6 +277,7 @@ abstract class Resource extends NovaResource
      *
      * @param NovaRequest $request
      * @param array $methods
+     *
      * @return FieldCollection
      */
     public function buildAvailableFields(NovaRequest $request, array $methods): FieldCollection

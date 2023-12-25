@@ -5,6 +5,7 @@ if (!function_exists('errorImage')) {
      * Choose an error image
      *
      * @param int $errorCode
+     *
      * @return string
      */
     function errorImage(int $errorCode): string

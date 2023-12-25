@@ -17,6 +17,7 @@ trait ReadOnlyTrait
      * Determine if this Model is writeable.
      *
      * @param bool $writeable
+     *
      * @return static
      */
     public static function writable(bool $writeable = true): static
@@ -30,6 +31,7 @@ trait ReadOnlyTrait
      * Save the model to the database.
      *
      * @param  array  $options
+     *
      * @return bool
      */
     public function save(array $options = []): bool
