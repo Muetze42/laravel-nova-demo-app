@@ -4,7 +4,7 @@ namespace App\Nova\Resources;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
 use NormanHuth\FontAwesomeField\FontAwesome;
-use App\Nova\Actions\DetachedAction;
+//use App\Nova\Actions\DetachedAction;
 
 class NormanHuthFontAwesomeField extends Resource
 {
@@ -101,7 +101,7 @@ class NormanHuthFontAwesomeField extends Resource
     public function actions(NovaRequest $request): array
     {
         return [
-            (new DetachedAction()),
+            //(new DetachedAction()),
         ];
     }
 }
