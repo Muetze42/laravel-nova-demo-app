@@ -2,9 +2,9 @@
 
 namespace App\Nova\Resources;
 
+use Faker\Factory;
 use Illuminate\Support\Str;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Faker\Factory;
 
 class Menu extends Resource
 {
@@ -45,6 +45,7 @@ class Menu extends Resource
      * Get the fields displayed by the resource.
      *
      * @param NovaRequest $request
+     *
      * @return array
      */
     public function fields(NovaRequest $request): array
@@ -58,6 +59,7 @@ class Menu extends Resource
      * Get the cards available for the request.
      *
      * @param NovaRequest $request
+     *
      * @return array
      */
     public function cards(NovaRequest $request): array
@@ -69,6 +71,7 @@ class Menu extends Resource
      * Get the filters available for the resource.
      *
      * @param NovaRequest $request
+     *
      * @return array
      */
     public function filters(NovaRequest $request): array
@@ -80,6 +83,7 @@ class Menu extends Resource
      * Get the lenses available for the resource.
      *
      * @param NovaRequest $request
+     *
      * @return array
      */
     public function lenses(NovaRequest $request): array
@@ -91,6 +95,7 @@ class Menu extends Resource
      * Get the actions available for the resource.
      *
      * @param NovaRequest $request
+     *
      * @return array
      */
     public function actions(NovaRequest $request): array

@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             if (in_array($file, ['DatabaseSeeder', 'UserSeeder'])) {
                 continue;
             }
-            $this->seed(__NAMESPACE__.'\\'.$file);
+            $this->seed(__NAMESPACE__ . '\\' . $file);
         }
     }
 
@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
      * Run Seeder if not already runs.
      *
      * @param mixed $class
+     *
      * @return void
      */
     protected function seed(mixed $class): void

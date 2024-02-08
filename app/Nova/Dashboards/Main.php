@@ -16,7 +16,7 @@ class Main extends Dashboard
     public function cards(): array
     {
         return [
-            new NovaResourceCard(CardUser::class)
+            new NovaResourceCard(CardUser::class),
         ];
     }
 }

@@ -11,5 +11,5 @@ class Seeder extends Model
      *
      * @var string|null
      */
-    const UPDATED_AT = null;
+    public const UPDATED_AT = null;
 }

@@ -9,8 +9,8 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
-use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Response;
 
 class AutoLoginMiddleware
 {
@@ -19,6 +19,7 @@ class AutoLoginMiddleware
      *
      * @param Request $request
      * @param Closure $next
+     *
      * @throws Exception
      * @return Application|\Illuminate\Foundation\Application|RedirectResponse|Redirector|mixed|Response
      */

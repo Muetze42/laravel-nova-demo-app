@@ -18,6 +18,7 @@ class ContentPerspective extends Perspective
      * Override Nova menus.
      *
      * @param Request $request
+     *
      * @return void
      */
     public function novaMenus(Request $request): void
@@ -47,6 +48,7 @@ class ContentPerspective extends Perspective
      * The perspective label.
      *
      * @param Request $request
+     *
      * @return string
      */
     public function label(Request $request): string
@@ -58,6 +60,7 @@ class ContentPerspective extends Perspective
      * Determine if the filter or action should be available for the given request.
      *
      * @param Request $request
+     *
      * @return bool
      */
     public function authorizedToSee(Request $request): bool

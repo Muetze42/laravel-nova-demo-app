@@ -54,6 +54,7 @@ class NormanHuthPrismJs extends Resource
      * Get the fields displayed by the resource.
      *
      * @param NovaRequest $request
+     *
      * @return array
      */
     public function fields(NovaRequest $request): array
@@ -61,7 +62,7 @@ class NormanHuthPrismJs extends Resource
         return [
             Text::make('Note', 'content', function () {
                 return 'Open the detail page to see this field.';
-            })->hideFromDetail()->readonly()->help('<a href="'.config('nova.path').'resources/norman-huth-prism-js/'.$this->getKey().'" class="link-default">Detail Page</a>'),
+            })->hideFromDetail()->readonly()->help('<a href="' . config('nova.path') . 'resources/norman-huth-prism-js/' . $this->getKey() . '" class="link-default">Detail Page</a>'),
             PrismJs::make(__('Content'), 'content'),
             Markdown::make(__('Content'), 'content')
                 ->onlyOnForms(),
@@ -72,6 +73,7 @@ class NormanHuthPrismJs extends Resource
      * Get the cards available for the request.
      *
      * @param NovaRequest $request
+     *
      * @return array
      */
     public function cards(NovaRequest $request): array
@@ -83,6 +85,7 @@ class NormanHuthPrismJs extends Resource
      * Get the filters available for the resource.
      *
      * @param NovaRequest $request
+     *
      * @return array
      */
     public function filters(NovaRequest $request): array
@@ -94,6 +97,7 @@ class NormanHuthPrismJs extends Resource
      * Get the lenses available for the resource.
      *
      * @param NovaRequest $request
+     *
      * @return array
      */
     public function lenses(NovaRequest $request): array
@@ -105,6 +109,7 @@ class NormanHuthPrismJs extends Resource
      * Get the actions available for the resource.
      *
      * @param NovaRequest $request
+     *
      * @return array
      */
     public function actions(NovaRequest $request): array
