@@ -29,7 +29,7 @@
         "norman-huth/nova-perspectives": "^v1.1.2",
         "norman-huth/nova-prism-js": "^1.1.1",
         "norman-huth/nova-radio-field": "^1.2.0",
-        "norman-huth/nova-resource-card": "^1.0.2"
+        "norman-huth/nova-resource-card": "^1.0.3"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.13",
