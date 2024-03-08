@@ -3670,16 +3670,16 @@
         },
         {
             "name": "norman-huth/nova-resource-card",
-            "version": "v1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Muetze42/nova-resource-card.git",
-                "reference": "f7656a37220a526a041c838df7d3d7733108c65b"
+                "reference": "f4b5bc55a3f83c5adf3aa9aad8fc193984511d50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Muetze42/nova-resource-card/zipball/f7656a37220a526a041c838df7d3d7733108c65b",
-                "reference": "f7656a37220a526a041c838df7d3d7733108c65b",
+                "url": "https://api.github.com/repos/Muetze42/nova-resource-card/zipball/f4b5bc55a3f83c5adf3aa9aad8fc193984511d50",
+                "reference": "f4b5bc55a3f83c5adf3aa9aad8fc193984511d50",
                 "shasum": ""
             },
             "require": {
@@ -3710,7 +3710,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Muetze42/nova-resource-card/issues",
-                "source": "https://github.com/Muetze42/nova-resource-card/tree/v1.0.2"
+                "source": "https://github.com/Muetze42/nova-resource-card/tree/1.0.3"
             },
             "funding": [
                 {
@@ -3722,7 +3722,7 @@
                     "type": "ko_fi"
                 }
             ],
-            "time": "2023-12-25T19:41:33+00:00"
+            "time": "2024-03-08T19:59:49+00:00"
         },
         {
             "name": "nunomaduro/termwind",
