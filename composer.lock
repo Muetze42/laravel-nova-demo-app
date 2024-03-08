@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "51b8f1a61c29b0ae89700701fb5ae696",
+    "content-hash": "00aaee3a4babe2d46967c546824c5272",
     "packages": [
         {
             "name": "brick/math",
@@ -3439,16 +3439,16 @@
         },
         {
             "name": "norman-huth/nova-menu",
-            "version": "1.7.8",
+            "version": "1.7.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Muetze42/nova-menu.git",
-                "reference": "7401a14d6659b19ff154a3aa83bb5b438cf06dd4"
+                "reference": "c10556b817f022af819bc95962f85dc30abb591d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Muetze42/nova-menu/zipball/7401a14d6659b19ff154a3aa83bb5b438cf06dd4",
-                "reference": "7401a14d6659b19ff154a3aa83bb5b438cf06dd4",
+                "url": "https://api.github.com/repos/Muetze42/nova-menu/zipball/c10556b817f022af819bc95962f85dc30abb591d",
+                "reference": "c10556b817f022af819bc95962f85dc30abb591d",
                 "shasum": ""
             },
             "require": {
@@ -3494,7 +3494,7 @@
                     "type": "ko_fi"
                 }
             ],
-            "time": "2024-03-06T18:50:04+00:00"
+            "time": "2024-03-08T18:38:33+00:00"
         },
         {
             "name": "norman-huth/nova-perspectives",
@@ -7681,16 +7681,16 @@
         },
         {
             "name": "composer/pcre",
-            "version": "3.1.1",
+            "version": "3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/pcre.git",
-                "reference": "00104306927c7a0919b4ced2aaa6782c1e61a3c9"
+                "reference": "4775f35b2d70865807c89d32c8e7385b86eb0ace"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/pcre/zipball/00104306927c7a0919b4ced2aaa6782c1e61a3c9",
-                "reference": "00104306927c7a0919b4ced2aaa6782c1e61a3c9",
+                "url": "https://api.github.com/repos/composer/pcre/zipball/4775f35b2d70865807c89d32c8e7385b86eb0ace",
+                "reference": "4775f35b2d70865807c89d32c8e7385b86eb0ace",
                 "shasum": ""
             },
             "require": {
@@ -7732,7 +7732,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/pcre/issues",
-                "source": "https://github.com/composer/pcre/tree/3.1.1"
+                "source": "https://github.com/composer/pcre/tree/3.1.2"
             },
             "funding": [
                 {
@@ -7748,7 +7748,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-11T07:11:09+00:00"
+            "time": "2024-03-07T15:38:35+00:00"
         },
         {
             "name": "filp/whoops",
